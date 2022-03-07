@@ -5,14 +5,14 @@ EU4 Ironman &amp; Multiplayer Console Enabler For Linux. Uses https://github.com
 
 # Usage
 (first time only)
-Place all funchook files inside /usr/lib/ (sudo mv filename /usr/lib).
-Place N-Phenethyl-4-piperidinone.so and loadfile inside the same directory.
-Enable execution on loafile (chmod +x loadfile).
+1. Place all funchook files inside /usr/lib/ (sudo mv filename /usr/lib).
+2. Place N-Phenethyl-4-piperidinone.so and loadfile inside the same directory.
+3. Enable execution on loafile (chmod +x loadfile).
 (non first time only)
-Load up EU4 into the main menu.
-Run loadfile using using sudo (sudo ./loadfile). This will inject N-Phenethyl-4-piperidinone into EU4.
-Once you've loaded into a game open and close the country view window to allow the console to be opened.
-Press `/~ to open the console and execute commands as normal.
+4. Load up EU4 into the main menu.
+5. Run loadfile using using sudo (sudo ./loadfile). This will inject N-Phenethyl-4-piperidinone into EU4.
+6. Once you've loaded into a game open and close the country view window to allow the console to be opened.
+7. Press `/~ to open the console and execute commands as normal.
 
 # Important Notes
 A lot of commands will desync the game if you're not the host. It's best to stick to firing events as your main means of making things in the game happen. https://eu4cheats.com/events
