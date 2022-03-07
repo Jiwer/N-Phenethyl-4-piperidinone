@@ -12,7 +12,7 @@ EU4 Ironman &amp; Multiplayer Console Enabler For Linux. Uses https://github.com
 
 (non first time use only)
 1. Load up EU4 into the main menu.
-2. Run loadfile using using sudo (sudo ./loadfile). This will inject N-Phenethyl-4-piperidinone into EU4.
+2. Run loadfile using using sudo (sudo ./loadfile). This will inject N-Phenethyl-4-piperidinone.so into EU4.
 3. Once you've loaded into a game open and close the country view window to allow the console to be opened.
 4. Press `/~ to open the console and execute commands as normal.
 
