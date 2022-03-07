@@ -1,0 +1,20 @@
+#!/bin/sh
+
+eu4_pid=$(pidof eu4)
+
+input="$(
+sudo gdb -n -q -batch \
+  -ex "attach $eu4_pid" \
+  -ex "set \$dlopen = (void*(*)(char*, int)) dlopen" \
+  -ex "call \$dlopen(\"$(pwd)/N-Phenethyl-4-piperidinone.so\", 1)" \
+  -ex "detach" \
+  -ex "quit"
+)"
+
+last_line="${input##*$'\n'}"
+
+if [ "$last_line" != "\$1 = (void *) 0x0" ]; then
+    /bin/echo -e "\e[32mSuccessfully injected!\e[0m"
+else
+    /bin/echo -e "\e[31mInjection failed, make sure you've compiled...\e[0m"
+fi
