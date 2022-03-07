@@ -19,6 +19,9 @@ RestoreDeviceObjects_t o_RestoreDeviceObjects;
 typedef long long (*CCountryViewShow_t)(long long a1);
 CCountryViewShow_t o_CCountryViewShow;
 
+typedef void (*WeWentOOS_t)(void** pThis, const char* a2);
+WeWentOOS_t o_WeWentOOS;
+
 bool bHasGameStarted = false;
 
 void hk_SetIsMultiplayer(void* pThis, bool a2)
@@ -53,6 +56,13 @@ long long hk_CCountryViewShow(long long a1)
     return o_CCountryViewShow(a1);
 }
 
+void hk_WeWentOOS(void** pThis, const char* a2)
+{
+	//a2 = "_FUCK_NIGGERS";
+
+    //o_WeWentOOS(pThis, a2);
+}
+
 int __attribute__ ((constructor)) Fentanyl_Main()
 {
     funchook_t* funchook = funchook_create();
@@ -62,12 +72,14 @@ int __attribute__ ((constructor)) Fentanyl_Main()
 	o_HandleInput = reinterpret_cast<HandleInput_t>(dlsym(RTLD_DEFAULT, "_ZN12CInGameIdler11HandleInputEv"));
 	o_RestoreDeviceObjects = reinterpret_cast<HandleInput_t>(dlsym(RTLD_DEFAULT, "_ZN12CInGameIdler20RestoreDeviceObjectsEv"));
 	o_CCountryViewShow = reinterpret_cast<CCountryViewShow_t>(dlsym(RTLD_DEFAULT, "_ZN12CCountryView4HideEv"));
+	o_WeWentOOS = reinterpret_cast<WeWentOOS_t>(dlsym(RTLD_DEFAULT, "_ZN11COOSHandler9WeWentOOSEPKc"));
 
 	funchook_prepare(funchook, (void**)&o_SetIsMultiplayer, (void*)hk_SetIsMultiplayer);
 	funchook_prepare(funchook, (void**)&o_SetIsRelease, (void*)hk_SetIsRelease);
 	funchook_prepare(funchook, (void**)&o_HandleInput, (void*)hk_HandleInput);
 	funchook_prepare(funchook, (void**)&o_RestoreDeviceObjects, (void*)hk_RestoreDeviceObjects);
 	funchook_prepare(funchook, (void**)&o_CCountryViewShow, (void*)hk_CCountryViewShow);
+	funchook_prepare(funchook, (void**)&o_WeWentOOS, (void*)hk_WeWentOOS);
 	funchook_install(funchook, 0);
 
 	return 0;
