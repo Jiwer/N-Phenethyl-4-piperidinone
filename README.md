@@ -5,9 +5,10 @@ EU4 Ironman &amp; Multiplayer Console Enabler For Linux. Uses https://github.com
 
 # Usage
 (first time use only)
-1. Place all funchook files inside /usr/lib/ (sudo mv filename /usr/lib).
-2. Place N-Phenethyl-4-piperidinone.so and loadfile inside the same directory.
-3. Enable execution on loadfile (chmod +x loadfile).
+1. Download the latest release (https://github.com/Jiwer/N-Phenethyl-4-piperidinone/releases/tag/linux).
+2. Place all funchook files inside /usr/lib/ (sudo mv filename /usr/lib).
+3. Place N-Phenethyl-4-piperidinone.so and loadfile inside the same directory.
+4. Enable execution on loadfile (chmod +x loadfile).
 
 (non first time use only)
 1. Load up EU4 into the main menu.
