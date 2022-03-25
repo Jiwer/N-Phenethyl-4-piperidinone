@@ -58,8 +58,6 @@ long long hk_CCountryViewShow(long long a1)
 
 void hk_WeWentOOS(void** pThis, const char* a2)
 {
-	//a2 = "_FUCK_NIGGERS";
-
     //o_WeWentOOS(pThis, a2);
 }
 
