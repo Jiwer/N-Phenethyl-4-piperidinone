@@ -17,7 +17,7 @@ EU4 Ironman &amp; Multiplayer Console Enabler For Linux. Uses https://github.com
 4. Press `/~ to open the console and execute commands as normal.
 
 # Important Notes
-A lot of commands will desync the game if you're not the host. It's best to stick to firing events as your main means of making things in the game happen. https://eu4cheats.com/events
+A lot of commands are not networked. I have removed the ability for the game to desync, but it's best to stick to firing events as your main means of making things in the game happen. https://eu4cheats.com/events
 
 It's best to wait for the first month tick before executing any commands.
 
