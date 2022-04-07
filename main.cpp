@@ -2,7 +2,6 @@
 #include <dlfcn.h>
 #include <funchook.h>
 #include <unistd.h>
-#include <pthread.h>
 
 typedef void (*SetIsMultiplayer_t)(void* pThis, bool a2);
 SetIsMultiplayer_t o_SetIsMultiplayer;
